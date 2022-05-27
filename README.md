@@ -5,8 +5,8 @@ with operations. This is important if you're using data from backend (some DB li
 as well.
 
 **Project is updated and now runs on Angular version 13 including Angular Material 13.**
-* For Angular 6 clone [angular_6 branch](https://github.com/marinantonio/angular-mat-table-crud/tree/angular_6).
-* For Angular 4 clone [angular_4 branch](https://github.com/marinantonio/angular-mat-table-crud/tree/angular_4).
+* For Angular 6 clone [angular_6 branch](https://github.com/marinantonio/angular-ng-todo-app/tree/angular_6).
+* For Angular 4 clone [angular_4 branch](https://github.com/marinantonio/angular-ng-todo-app/tree/angular_4).
 
 ## Screenshots
 
@@ -25,7 +25,7 @@ You can find entire HttpClient REST code from this project inside dataService.
 
 ## Demo
 
-You can play around with code demo [here](https://marinantonio.github.io/angular-mat-table-crud/).
+You can play around with code demo [here](https://marinantonio.github.io/angular-ng-todo-app/).
 
 ## Refresh function
 
@@ -37,7 +37,7 @@ private refreshTable() {
   this.paginator._changePageSize(this.paginator.pageSize);
 }
 ```
-Credits to [yeager-j](https://github.com/marinantonio/angular-mat-table-crud/issues/12) for providing the refresh function
+Credits to [yeager-j](https://github.com/marinantonio/angular-ng-todo-app/issues/12) for providing the refresh function
 
 Old method:
 ```
