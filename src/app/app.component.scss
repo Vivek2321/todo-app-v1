@@ -1,0 +1,58 @@
+/* Structure */
+.container {
+  display: flex;
+  flex-direction: column;
+
+  /* Filter */
+  .form {
+    min-height: 56px;
+    max-height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 8px 24px 0;
+    font-size: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    flex-grow: 1;
+    margin-top: 8px;
+  }
+
+  /* Mat table */
+  .no-results {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .todo-table {
+    width: 100%;
+
+    .mat-row .mat-cell {
+      border-bottom: 1px solid transparent;
+      border-top: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .mat-row:hover .mat-cell {
+      border-color: currentColor;
+    }
+
+    .demo-row-is-clicked {
+      font-weight: bold;
+    }
+
+    .mat-column-title {
+      padding-right: 3rem;
+    }
+
+    .mat-column-state {
+      padding-left: 3rem;
+    }
+  }
+}

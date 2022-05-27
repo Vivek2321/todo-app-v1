@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mat-table-crud": {
+    "ng-todo-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mat-table-crud:build"
+            "browserTarget": "ng-todo-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mat-table-crud:build:production"
+              "browserTarget": "ng-todo-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mat-table-crud:build"
+            "browserTarget": "ng-todo-app:build"
           }
         },
         "test": {
@@ -87,7 +87,7 @@
         }
       }
     },
-    "mat-table-crud-e2e": {
+    "ng-todo-app-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -96,13 +96,13 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "mat-table-crud:serve"
+            "devServerTarget": "ng-todo-app:serve"
           }
         }
       }
     }
   },
-  "defaultProject": "mat-table-crud",
+  "defaultProject": "ng-todo-app",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

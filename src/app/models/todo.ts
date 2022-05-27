@@ -1,4 +1,4 @@
-export class Issue {
+export class Todo {
   id: number;
   title: string;
   state: string;

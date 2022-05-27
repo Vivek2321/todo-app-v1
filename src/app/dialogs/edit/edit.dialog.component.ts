@@ -1,21 +1,20 @@
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import {Component, Inject} from '@angular/core';
-import {DataService} from '../../services/data.service';
-import {FormControl, Validators} from '@angular/forms';
+import { Component, Inject } from '@angular/core';
+import { TodoDataService } from '../../services/data.service';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-baza.dialog',
-  templateUrl: '../../dialogs/edit/edit.dialog.html',
-  styleUrls: ['../../dialogs/edit/edit.dialog.css']
+  selector: 'app-edit-dialog',
+  templateUrl: './edit.dialog.html',
+  styleUrls: ['./edit.dialog.scss']
 })
 export class EditDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<EditDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any, public dataService: DataService) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, public dataService: TodoDataService) { }
 
   formControl = new FormControl('', [
     Validators.required
-    // Validators.email,
   ]);
 
   getErrorMessage() {
@@ -24,15 +23,12 @@ export class EditDialogComponent {
         '';
   }
 
-  submit() {
-    // emppty stuff
-  }
-
-  onNoClick(): void {
+  cancel(): void {
     this.dialogRef.close();
   }
 
-  stopEdit(): void {
-    this.dataService.updateIssue(this.data);
+  save(): void {
+    this.dataService.updateTodo(this.data);
+    this.dialogRef.close(true);
   }
 }

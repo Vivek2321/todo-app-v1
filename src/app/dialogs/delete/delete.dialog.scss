@@ -1,0 +1,45 @@
+.dialog-header {
+  padding: 1.1875rem 1.875rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 0px #E4E9EF;
+
+  .header-text {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+.dialog-body {
+  padding: 1.875rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: space-between;
+
+  .dialog-body-contaoner {
+    margin-bottom: 2rem;
+    text-align: left;
+    letter-spacing: 0.01rem;
+    color: #000000;
+    opacity: 1;
+  }
+
+  .action-btn-container {
+    margin-top: 0.5rem;
+    text-align: right;
+
+    .delete-btn {
+      background-color: #C3002F;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    .cancel-btn {
+      color: #C3002F;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  }
+}

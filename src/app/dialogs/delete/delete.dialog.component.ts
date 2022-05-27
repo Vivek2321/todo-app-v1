@@ -1,23 +1,23 @@
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import {Component, Inject} from '@angular/core';
-import {DataService} from '../../services/data.service';
-
+import { Component, Inject } from '@angular/core';
+import { TodoDataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-delete.dialog',
-  templateUrl: '../../dialogs/delete/delete.dialog.html',
-  styleUrls: ['../../dialogs/delete/delete.dialog.css']
+  selector: 'app-delete-dialog',
+  templateUrl: './delete.dialog.html',
+  styleUrls: ['./delete.dialog.scss']
 })
 export class DeleteDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<DeleteDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any, public dataService: DataService) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, public todoDataService: TodoDataService) { }
 
-  onNoClick(): void {
+  close(): void {
     this.dialogRef.close();
   }
 
   confirmDelete(): void {
-    this.dataService.deleteIssue(this.data.id);
+    this.todoDataService.deleteTodo(this.data.id);
+    this.dialogRef.close(true);
   }
 }

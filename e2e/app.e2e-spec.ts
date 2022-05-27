@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('mat-table-crud App', () => {
+describe('ng-todo-app App', () => {
   let page: AppPage;
 
   beforeEach(() => {

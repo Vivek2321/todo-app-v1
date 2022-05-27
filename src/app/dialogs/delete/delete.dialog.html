@@ -1,18 +1,14 @@
-<div class="container">
-  <h3 mat-dialog-title>Are you sure?</h3>
-  <div mat-dialog-content>
-    Id: {{data.id}}
-    <p></p>
-    Title: {{data.title}}
-    <p></p>
-    State: {{data.state}}
-    <p></p>
-    Url: {{data.url}}
-    <p></p>
+<div class="dialog-header">
+  <span class="header-text">Delete Todo - {{data.id}}</span>
+</div>
+<div class="dialog-body">
+  <div class="dialog-body-contaoner">
+    <span>Are you sure you want to Delete?</span>
   </div>
-
-  <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="1" (click)="confirmDelete()">Delete</button>
-    <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+  <div class="action-btn-container">
+    <button mat-button mat-dialog-close class="cancel-btn">Cancel</button>
+    <button mat-button class="delete-btn" (click)="confirmDelete()">
+      Delete
+    </button>
   </div>
 </div>
